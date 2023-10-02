@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Post{% endblock %}
+
+{% block style %}
+
+    <link rel="stylesheet" href="/css/admin_post.css">
+
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="align-right">
+            <input type="button" onclick="location.href='/admin/posts/add'" id="addPost" value="New" class="btn btn-primary mb-4"/>
+        </div>
+        <div id="posts" class="posts">
+            <div>ID</div>
+            <div>Thumb</div>
+            <div>Title</div>
+            <div>Status</div>
+            <div>Action</div>
+        </div>
+
+        <div class="page-info">
+            <div class="limit-records">
+                <label for="limit-records">Page</label>
+                <select name="limit-records" id="limit-records">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="50">50</option>
+                    <option value="all">All</option>
+                </select>
+            </div>
+
+            <div id="pagination">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+
+    <script src="/js/add_limit_params.js"></script>
+
+    <script src="/js/admin/add_page_params.js"></script>
+
+    <script src="/js/admin/list_posts.js"></script>
+
+{% endblock %}

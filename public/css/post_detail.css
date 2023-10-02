@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.post-info{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.thumb-img{
+    width: 450px;
+    height: 300px;
+}

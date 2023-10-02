@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Post{% endblock %}
+
+{% block style %}
+
+    <link rel="stylesheet" href="/css/admin_post_add_edit.css">
+
+{% endblock %}
+
+{% block body %}
+
+<!--    <div id="post-edit-{{ post_id }}" class="post-edit">-->
+<!--&lt;!&ndash;        <div id="check-allow" style="display: none">&ndash;&gt;-->
+<!--            <form id="edit-post" method="post" enctype="multipart/form-data">-->
+<!--                <label for="title">Title</label>-->
+<!--                <input name="title" id="title" required>-->
+
+<!--                <label for="description">Description</label>-->
+<!--                <input name="description" id="description" required>-->
+
+<!--                <label for="image">Image</label>-->
+<!--                <input name="thumbnail" id="image" type="file" accept="image/*">-->
+<!--                <img src="" alt="uploaded image" id="uploaded-image">-->
+
+<!--                <label for="status">Status</label>-->
+<!--                <select name="status" id="status">-->
+<!--                    <option value="1">Enable</option>-->
+<!--                    <option value="0">Disable</option>-->
+<!--                </select>-->
+
+<!--                <button id="submit" type="submit">Submit</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="container">
+        <h1>Edit Post</h1>
+
+        <div id="post-edit-{{ post_id }}" class="post-edit">
+            <div id="check-allow" style="display: none">
+                <form id="edit-post" method="post" enctype="multipart/form-data">
+                    <div class="formfield">
+                        <label for="title">Title</label>
+                        <div class="input-wrapper">
+                            <input name="title" id="title" required autofocus>
+                        </div>
+                    </div>
+
+                    <div class="formfield">
+                        <label for="description">Description</label>
+                        <div class="input-wrapper">
+                            <textarea name="description" id="description" class="table-form" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="formfield">
+                        <label for="image">Image</label>
+                        <div class="input-wrapper">
+                            <input name="thumbnail" id="image" type="file" accept="image/*" class="table-form">
+                            <img src="#" alt="uploaded image" id="uploaded-image" style="display: none">
+                        </div>
+                    </div>
+
+
+                    <div class="formfield">
+                        <label for="status">Status</label>
+                        <div class="input-wrapper">
+                            <select name="status" id="status">
+                                <option value="1">Enable</option>
+                                <option value="0">Disable</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="align-center">
+                        <button id="submit" type="submit" class="btn btn-primary mb-4">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="err"></div>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+
+    <script src="/js/admin/check_allow.js"></script>
+
+    <script src="/js/admin/get_post_detail_for_edit.js"></script>
+
+    <script src="/js/admin/change_image.js"></script>
+
+    <script src="/js/admin/edit_post.js"></script>
+
+{% endblock %}

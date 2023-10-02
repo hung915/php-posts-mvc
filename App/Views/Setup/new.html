@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Setting up DB for the app{% endblock %}
+
+{% block body %}
+
+    <h1>Setting up DB for the app</h1>
+
+    {% if message %}
+    <p>Errors: {{ message }}</p>
+    {% endif %}
+
+    <form action="/setup/save" method="post">
+        <div>
+            <label for="inputDBHost">Server</label>
+            <input type="text" id="inputDBHost" name="dbHost" required autofocus>
+        </div>
+        <div>
+            <label for="inputDBUser">Username</label>
+            <input type="text" id="inputDBUser" name="dbUser" required>
+        </div>
+        <div>
+            <label for="inputDBPassword">Password</label>
+            <input type="text" id="inputDBPassword" name="dbPassword" required>
+        </div>
+        <div>
+            <label for="inputDBName">Database</label>
+            <input type="text" id="inputDBName" name="dbName" required>
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+
+{% endblock %}

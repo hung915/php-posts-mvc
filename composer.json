@@ -1,0 +1,13 @@
+{
+  "require": {
+    "twig/twig": "3.7.1",
+    "vlucas/phpdotenv": "5.5.0",
+    "ext-pdo": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Core\\": "Core/",
+      "App\\": "App/"
+    }
+  }
+}

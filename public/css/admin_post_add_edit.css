@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.formfield {
+    display: table;
+    width: 100%;
+    padding-bottom: 25px;
+}
+.formfield label,
+.formfield .input-wrapper {
+    display: table-cell;
+    vertical-align: top;
+}
+.formfield label {
+    width: 150px;
+}
+.formfield .input-wrapper .table-form {
+    width: 100%;
+}
+
+#title{
+    width: 40%;
+}
+
+.align-center {
+    text-align: center;
+}
+
+textarea {
+    height: 200px;
+}
