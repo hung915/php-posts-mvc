@@ -82,7 +82,7 @@ abstract class Controller
 
     public function setup(): void
     {
-        $envFile = dirname(__DIR__) . '/.env';
+        $envFile = dirname(__DIR__) . '/.env.example';
         if (! file_exists($envFile)) {
             $this->redirect('/setup');
         }

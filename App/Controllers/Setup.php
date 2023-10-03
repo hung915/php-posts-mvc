@@ -10,7 +10,7 @@ class Setup
 {
     public function new(): void
     {
-        $envFile = dirname(__DIR__, 2) . '/.env';
+        $envFile = dirname(__DIR__, 2) . '/.env.example';
         if (! file_exists($envFile)) {
             View::renderTemplate('Setup/new.html');
         } else {
@@ -34,7 +34,7 @@ class Setup
             header('Location: http://' . $_SERVER['HTTP_HOST'] . '/', true, 303);
             exit();
         } catch(PDOException $e) {
-            View::renderTemplate('Setup/index.html', [
+            View::renderTemplate('Setup/new.html', [
                 'message' => 'Connection failed: Please re-enter DB info try again'
             ]);
         }
@@ -50,7 +50,7 @@ class Setup
 
     public function createENV(string $txt): void
     {
-        $envFile = fopen(dirname(__DIR__, 2) . '/.env', "w") or die("Unable to open env file!");
+        $envFile = fopen(dirname(__DIR__, 2) . '/.env.example', "w") or die("Unable to open env file!");
         fwrite($envFile, $txt);
         fclose($envFile);
     }

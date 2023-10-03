@@ -1,6 +1,5 @@
 const loginForm = document.forms[0];
-// const logoutButton = document.getElementById("logout");
-// const viewPostButton = document.getElementById("viewPost");
+console.log(loginForm);
 
 loginForm.addEventListener('submit', async (e) => {
 
