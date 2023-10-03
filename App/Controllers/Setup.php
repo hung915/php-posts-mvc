@@ -12,7 +12,7 @@ class Setup
     {
         $envFile = dirname(__DIR__, 2) . '/.env';
         if (! file_exists($envFile)) {
-            View::renderTemplate('Setup/index.html');
+            View::renderTemplate('Setup/new.html');
         } else {
             header('Location: http://' . $_SERVER['HTTP_HOST'], true, 303);
             exit();
